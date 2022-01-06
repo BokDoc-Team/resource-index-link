@@ -331,7 +331,7 @@ var render = function() {
             1
           )
         ])
-      : _c("p", [_vm._v(" ")])
+      : _vm._e()
   ])
 }
 var staticRenderFns = []
