@@ -13,7 +13,7 @@
                     >{{ safeFieldValue }}</router-link>
             </div>
         </div>
-        <p v-else>&nbsp;</p>
+        <!-- <p v-else>&nbsp;</p> -->
     </div>
 </template>
 
