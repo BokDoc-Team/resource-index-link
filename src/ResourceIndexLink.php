@@ -14,14 +14,48 @@ class ResourceIndexLink extends Text
      */
     public $component = 'resource-index-link';
 
+    protected $primaryKey = 'id';
+
     /**
-     * Sets the link to open in a new tab
+     * Sets the link to open in a new tab.
      *
-     * @return void
+     * @return $this
      */
     public function newTab()
     {
         return $this->withMeta(['newTab' => true]);
+    }
+
+    /**
+     * Sets the field ID attribute.
+     *
+     * @return $this
+     */
+    public function fieldKey($column)
+    {
+        $this->primaryKey = $column ?? $this->primaryKey;
+
+        return $this->withMeta(['fieldKey' => $this->primaryKey]);
+    }
+
+    /**
+     * Sets the link prefix.
+     *
+     * @return $this
+     */
+    public function prefix($str)
+    {
+        return $this->withMeta(['prefix' => $str]);
+    }
+
+    /**
+     * Sets the link suffix.
+     *
+     * @return $this
+     */
+    public function suffix($str)
+    {
+        return $this->withMeta(['suffix' => $str]);
     }
 
     /**
